@@ -94,3 +94,29 @@ Feel free to contribute.
 
 [Ionic Cordova Camera](https://ionicframework.com/docs/native/camera/)
 
+## Other Info
+
+```
+This challenge addresses the following Sustainable Development
+Goals (SDGs), adopted by the United Nations General Assembly to
+engage all countries and all stakeholders in a collaborative
+partnership. The SDGs aim to build a better future for all people by
+achieving sustainable development in three dimensions – economic,
+social, and environmental – in the spirit of strengthened global
+solidarity:
+
+- Goal 1.5: By 2030, build the resilience of the poor and those in
+vulnerable situations and reduce their exposure and
+vulnerability to climate-related extreme events and other
+economic, social and environmental shocks and disasters.
+
+- Goal 11.5: By 2030, significantly reduce the number of deaths
+and the number of people affected and substantially decrease
+the direct economic losses relative to global gross domestic
+product caused by disasters, including water-related disasters,
+with a focus on protecting the poor and people in vulnerable
+situations.
+
+- Goal 13.1: Strengthen resilience and adaptive capacity to
+climate-related hazards and natural disasters in all countries
+```
