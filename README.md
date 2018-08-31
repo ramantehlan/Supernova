@@ -1,6 +1,6 @@
 # Supernova 
 
-Smart AI to keep people safe on beaches from all the dangers. It uses ML to identify RIP Currents from a video and also inform people about UV Index, Weather forecasts, Tsunamis, Harmful Algal Blooms (HABs), Animal Attacks etc, all through just one app.
+Smart AI to keep people safe on beaches from all the dangers. It uses ML and real time data to inform people about UV Index, Weather forecasts, Tsunamis, Harmful Algal Blooms (HABs), Animal Attacks and RIP currents etc, all through just one app.
 
 ## Problems and Solution
 
@@ -13,8 +13,7 @@ Smart AI to keep people safe on beaches from all the dangers. It uses ML to iden
 
 **Solution**
 
-- IOT device to sense UV radiation, show to users in real time.
-- Using Public APIs to get UV radiation data, show to users.
+- Show real time UV Index.
 - Suggest users different precautions according to the UV Index.
 
 **2. Harmful Algal Blooms AKA Red Tides (HABs)**
@@ -24,8 +23,7 @@ Smart AI to keep people safe on beaches from all the dangers. It uses ML to iden
 
 **Solution**
 
-- IOT device to check for HABs and Water Quality, show to users in real time.
-- Public APIs to get HABs forcast and data, show to users.
+- Show different areas having HABs, to avoide.
 - Suggest users beaches near them, which are HABs free and have good quality.
 
 
@@ -36,8 +34,7 @@ Smart AI to keep people safe on beaches from all the dangers. It uses ML to iden
 
 **Solution**
 
-- No APIs to find that, Sensors can be used to find that, to inform users in real time.
-- Infom people about the active RIP Currents.
+- Using ML to Identify RIP currents from a video.
 
 **4. Other**
 
@@ -48,10 +45,10 @@ Smart AI to keep people safe on beaches from all the dangers. It uses ML to iden
 
 **Solution**
 
-- *Water Quality:* APIs data to showcase that.
-- *Climate – Lighting:* Weather forcast can solve it.
-- *Tsunamis:* Weather forcast can solve that, also alearting users.
-- *Water Animals:* sonic senors and ML to detect animals.
+- *Water Quality:* Highlight areas with bad quality.
+- *Climate – Lighting:* Weather forcast, plus weather alerts.
+- *Tsunamis:* Weather forcast, plus weather alerts.
+- *Water Animals:* Sonic senors and ML to detect animals, also warn people of harmful area. 
 
 ## Environment
 
