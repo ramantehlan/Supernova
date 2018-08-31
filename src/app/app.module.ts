@@ -17,6 +17,8 @@ import { AndroidPermissions } from '@ionic-native/android-permissions';
 
 import { Camera } from '@ionic-native/camera';
 
+import { Geolocation } from '@ionic-native/geolocation';
+
 
 import { HttpService} from "../service/http.service";
 import {JsonpModule} from '@angular/http';
@@ -49,6 +51,7 @@ import {JsonpModule} from '@angular/http';
     SplashScreen,
     Camera,
     HttpService,
+    Geolocation,
     AndroidPermissions,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

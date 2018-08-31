@@ -6,6 +6,8 @@ import { AndroidPermissions } from '@ionic-native/android-permissions';
 
 import { HttpService} from "../../service/http.service";
 
+import { Geolocation } from '@ionic-native/geolocation';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -22,8 +24,8 @@ export class HomePage {
     openWeatherMapKey: string = "b48d71c76bc12ce4415b45cbb858195f";
     breezoMeterKey: string = "2d2a717abed743c982bf247bb59be090";
 
-    lat: string = "28.704060";
-    lon: string = "77.102493";
+    lat: number = 28.704060;
+    lon: number = 77.102493;
 
     // Date 
     airData: object;
@@ -92,7 +94,8 @@ export class HomePage {
 
   constructor(private androidPermissions: AndroidPermissions,
   			  private HttpService: HttpService,
-  			  public navCtrl: NavController) {
+  			  public navCtrl: NavController,
+  			  private geolocation: Geolocation) {
 
   	// To get the required permissions
   	this.androidPermissions.requestPermissions([
@@ -105,7 +108,22 @@ export class HomePage {
   				this.androidPermissions.PERMISSION.ACCESS_COARSE_LOCATION,
   				this.androidPermissions.PERMISSION.CAMERA,
 
-  				]);
+  				]).then(() => {
+  					this.geolocation.getCurrentPosition().then((resp) => {
+ 					this.lat = resp.coords.latitude;
+ 					this.lon = resp.coords.longitude;
+ 					
+ 					this.fetch();
+		
+					}).catch((error) => {
+  						console.log('Error getting location', error);
+					});
+  				});
+
+
+  }
+
+  fetch(): void{
 
   	// To get the UV Data
   	// This is to make a http call to fetch user information
@@ -132,7 +150,6 @@ export class HomePage {
         }, 
         error => alert("error")
       );
-
 
   }
 
