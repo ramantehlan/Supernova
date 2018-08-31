@@ -37,7 +37,7 @@ export class HomePage {
 
     // Parameters 
     airPara:object = {
-    	"appid": "2d2a717abed743c982bf247bb59be090",
+    	"key": "2d2a717abed743c982bf247bb59be090",
     	"lat": "28.632430",
     	"lon": "77.218790",
     }
@@ -54,6 +54,13 @@ export class HomePage {
 
     // Header object for login api
     header:object =  {
+        'Content-Type': 'application/json; charset=utf-8',
+        'Access-Control-Allow-Credentials': 'true',
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET,POST',
+        'Access-Control-Allow-Headers': 'Content-Type'
+    }
+    weatherHeader:object =  {
         'Content-Type': 'application/json; charset=utf-8',
         'Access-Control-Allow-Credentials': 'true',
         'Access-Control-Allow-Origin': '*',

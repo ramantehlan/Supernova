@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Dashboard</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -11,9 +11,99 @@
     Supernova is a smart AI to keep you safe on beaches from all the dangers. We uses ML and real time data to inform you about UV Index, Weather forecasts, Tsunamis, Harmful Algal Blooms (HABs), Animal Attacks and RIP currents etc, all through just one app.
   </p> 
 
-  <div *ngIf="uvData">
-  	{{ uvData[1] }}
-  	{{ test }}
+
+
+  <div class="card">
+  	<div class="card-head">
+  		Device Information
+  	</div>
+  	<div class="card-body">
+  			Latitude: {{ lat }} <br>
+  			Longitude: {{ lon }}
+  	</div>
+  </div>
+
+  <div class="card" *ngIf="uvData">
+  	<div class="card-head">
+  		UV Index
+  	</div>
+  	<div class="card-body">
+  			{{ uvData.value }}
+  	</div>
+  </div>
+
+  <div class="card" *ngIf="weatherData">
+  	<div class="card-head">
+  		Weather
+  	</div>
+  	<div class="card-body">
+
+  			Weather: {{ weatherData.weather[0].main }} <br>
+  			Cloudiness: {{ weatherData.clouds.all }}% <br> 
+  			Humidity: {{ weatherData.main.humidity }}% <br>
+  			Pressure: {{ weatherData.main.pressure }} hPa <br>
+  			Temperature: {{ weatherData.main.temp - 273 }}C <br>
+  			Wind Speed: {{ weatherData.wind.speed }} M/S <br>
+  			Wind Angle: {{ weatherData.wind.deg }} Deg <br>
+
+  	</div>
+  </div>
+
+    <div class="card" *ngIf="airData">
+  	<div class="card-head">
+  		Air
+  	</div>
+  	<div class="card-body">
+
+
+  		Area Quality: {{ airData.breezometer_description }} <Br>
+  		Area Air Quality Index: {{ airData.breezometer_aqi }}/100 [micrograms per cubic meter] (Good to Bad) <br>
+  		Country Quality: {{ airData.country_description }} <br>
+  		Country Air Quality Index: {{ airData.country_aqi }}/500 [micrograms per cubic meter] (Good to Bad) <Br>
+
+  		<br><Br>
+
+  		<b>Cause Of Pollution</b> <Br>
+  		{{ airData.dominant_pollutant_text.causes }}
+
+  		<br><Br>
+  		<b>Effects Of Pollution</b><br>
+  		{{ airData.dominant_pollutant_text.effects }}
+
+  		<br><Br>
+  		<b>Main Pollutant</b><Br>
+  		{{ airData.dominant_pollutant_text.main }}
+  		
+  	</div>
+  </div>
+
+  <div class="card" *ngIf="airData">
+  	<div class="card-head">
+  		Recommendations
+  	</div>
+  	<div class="card-body">
+
+  		 <b>Children</b> <Br>
+  		{{ airData.random_recommendations.children }}
+
+  		<br><Br>
+  		<b>Sport</b><br>
+  		{{ airData.random_recommendations.sport }}
+
+  		<br><Br>
+  		<b>health</b><Br>
+  		{{ airData.random_recommendations.health }}
+
+  		<br><Br>
+  		<b>inside</b><Br>
+  		{{ airData.random_recommendations.inside }}
+
+		<br><Br>
+  		<b>outside</b><Br>
+  		{{ airData.random_recommendations.outside }}
+  		
+
+  	</div>
   </div>
 
 
