@@ -9,6 +9,14 @@
 <ion-content padding>
 
 <button ion-button color="dark" (click)="takePhoto()">Take Video Or Photo for analysis.</button>
+
+<div *ngIf="imageURL">
 <img [src]="imageURL" *ngIf="imageURL" />
+
+<br><br>
+
+<h2> No RIP Current Found! </h2>
+</div>
+
   
 </ion-content>
