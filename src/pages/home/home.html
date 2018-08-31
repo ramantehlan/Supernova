@@ -29,7 +29,7 @@
 
   <div class="card" *ngIf="uvData">
   	<div class="card-head">
-  	<ion-icon name="ios-nuclear"></ion-icon>	UV Index
+  	<ion-icon name="ios-sunny"></ion-icon>	UV Index
   	</div>
   	<div class="card-body">
   			 <span class="bold"> {{ uvData.value }} </span> 
@@ -52,6 +52,7 @@
 
   	</div>
   </div>
+
 
     <div class="card" *ngIf="airData">
   	<div class="card-head">
@@ -80,6 +81,25 @@
   		
   	</div>
   </div>
+
+  	<div class="card">
+  		<div class="card-head">
+  	 		<ion-icon name="ios-nuclear"></ion-icon>	Harmful Algal Blooms (HABs) Area
+  		</div>
+  		<div class="card-body">
+  			India: 
+  			<Br><Br>
+  				<ul>
+  					<li>Kochi Beach</li>
+  					<li>Gujarat Coast</li>
+  					<li>Mumbai Beach</li>
+  					<li>Hyderabad Beach</li>
+  				</ul>  
+
+  			<br><BR>
+  			<i> 15% increase in HABs in last 12 years in India. </i>
+  		</div>
+  	</div>
 
   <div class="card" *ngIf="airData">
   	<div class="card-head">
