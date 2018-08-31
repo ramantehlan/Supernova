@@ -11,5 +11,10 @@
     Supernova is a smart AI to keep you safe on beaches from all the dangers. We uses ML and real time data to inform you about UV Index, Weather forecasts, Tsunamis, Harmful Algal Blooms (HABs), Animal Attacks and RIP currents etc, all through just one app.
   </p> 
 
+  <div *ngIf="uvData">
+  	{{ uvData[1] }}
+  	{{ test }}
+  </div>
+
 
 </ion-content>

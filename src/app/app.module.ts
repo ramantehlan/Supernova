@@ -1,6 +1,8 @@
 import { NgModule, ErrorHandler } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
+import { HttpClientModule }    from '@angular/common/http';
 import { MyApp } from './app.component';
 
 import { AboutPage } from '../pages/about/about';
@@ -15,6 +17,10 @@ import { AndroidPermissions } from '@ionic-native/android-permissions';
 
 import { Camera } from '@ionic-native/camera';
 
+
+import { HttpService} from "../service/http.service";
+import {JsonpModule} from '@angular/http';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -25,6 +31,9 @@ import { Camera } from '@ionic-native/camera';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    JsonpModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
@@ -39,6 +48,7 @@ import { Camera } from '@ionic-native/camera';
     StatusBar,
     SplashScreen,
     Camera,
+    HttpService,
     AndroidPermissions,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
