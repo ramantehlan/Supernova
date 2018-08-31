@@ -1,9 +1,19 @@
+h2{
+	text-align:center;
+}
+
+.logo{ 
+	width: 48px;
+	position:relative;
+	left:50%;
+	margin-left:-24px;
+}
+
 .card {
 	
 	margin:10px;
 	margin-top:20px;
 	margin-bottom:0px;
-	border:1px solid rgba(150,150,150,0.3);
 	border-radius:5px;
 
 }
@@ -15,8 +25,10 @@
 	font-weight: 16px;
 	padding-left: 10px;
 	padding-right: 10px;
-	border-bottom:1px solid rgba(150,150,150,0.3);
 	font-weight: bold;
+	background-color:green;
+	color:white;
+	border-radius: 5px 5px 0px 0px;
 
 }
 
@@ -26,5 +38,9 @@
 	padding-top:15px;
 	padding: 10px;
 	font-size:12px;
-
+	border:1px solid rgba(150,150,150,0.3);
+	border-top:0px;
+	border-radius: 0px 0px 5px 5px;
 }
+
+.bold{font-weight:bold}

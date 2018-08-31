@@ -38,18 +38,18 @@ export class HomePage {
     // Parameters 
     airPara:object = {
     	"key": "2d2a717abed743c982bf247bb59be090",
-    	"lat": "28.632430",
-    	"lon": "77.218790",
+    	"lat": this.lat,
+    	"lon": this.lon,
     }
     uvPara:object = {
     	"appid": "2ffcf64c74128a6644f33e554d86766c",
-    	"lat": "28.632430",
-    	"lon": "77.218790",
+    	"lat": this.lat,
+    	"lon": this.lon,
     }
     weatherPara:object = {
     	"appid": "2ffcf64c74128a6644f33e554d86766c",
-    	"lat": "28.632430",
-    	"lon": "77.218790",
+    	"lat": this.lat,
+    	"lon": this.lon,
     }
 
     // Header object for login api

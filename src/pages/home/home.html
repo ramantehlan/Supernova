@@ -5,7 +5,10 @@
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Supernova!</h2>
+  
+   <img src="assets/imgs/supernova.png" class="logo"> 
+
+  <h2>Welcome to Supernova</h2>
 
   <p>
     Supernova is a smart AI to keep you safe on beaches from all the dangers. We uses ML and real time data to inform you about UV Index, Weather forecasts, Tsunamis, Harmful Algal Blooms (HABs), Animal Attacks and RIP currents etc, all through just one app.
@@ -13,65 +16,66 @@
 
 
 
+
   <div class="card">
   	<div class="card-head">
-  		Device Information
+  		<ion-icon name="logo-android"></ion-icon> Device Information
   	</div>
   	<div class="card-body">
-  			Latitude: {{ lat }} <br>
-  			Longitude: {{ lon }}
+  			Latitude:  <span class="bold"> {{ lat }} </span>  <br>
+  			Longitude:  <span class="bold"> {{ lon }} </span> 
   	</div>
   </div>
 
   <div class="card" *ngIf="uvData">
   	<div class="card-head">
-  		UV Index
+  	<ion-icon name="ios-nuclear"></ion-icon>	UV Index
   	</div>
   	<div class="card-body">
-  			{{ uvData.value }}
+  			 <span class="bold"> {{ uvData.value }} </span> 
   	</div>
   </div>
 
   <div class="card" *ngIf="weatherData">
   	<div class="card-head">
-  		Weather
+  		<ion-icon name="ios-cloudy"></ion-icon> Weather
   	</div>
   	<div class="card-body">
 
-  			Weather: {{ weatherData.weather[0].main }} <br>
-  			Cloudiness: {{ weatherData.clouds.all }}% <br> 
-  			Humidity: {{ weatherData.main.humidity }}% <br>
-  			Pressure: {{ weatherData.main.pressure }} hPa <br>
-  			Temperature: {{ weatherData.main.temp - 273 }}C <br>
-  			Wind Speed: {{ weatherData.wind.speed }} M/S <br>
-  			Wind Angle: {{ weatherData.wind.deg }} Deg <br>
+  			Weather: <span class="bold"> {{ weatherData.weather[0].main }} </span> <br>
+  			Cloudiness:  <span class="bold"> {{ weatherData.clouds.all }}% </span>   <br> 
+  			Humidity:  <span class="bold"> {{ weatherData.main.humidity }}% </span>   <br>
+  			Pressure:  <span class="bold"> {{ weatherData.main.pressure }} hPa </span>   <br>
+  			Temperature:  <span class="bold"> {{ weatherData.main.temp - 273 }}C </span>   <br>
+  			Wind Speed:  <span class="bold"> {{ weatherData.wind.speed }} M/S </span>   <br>
+  			Wind Angle:  <span class="bold"> {{ weatherData.wind.deg }} Deg </span>   <br>
 
   	</div>
   </div>
 
     <div class="card" *ngIf="airData">
   	<div class="card-head">
-  		Air
+  	 <ion-icon name="ios-medical"></ion-icon>	Air
   	</div>
   	<div class="card-body">
 
 
-  		Area Quality: {{ airData.breezometer_description }} <Br>
-  		Area Air Quality Index: {{ airData.breezometer_aqi }}/100 [micrograms per cubic meter] (Good to Bad) <br>
-  		Country Quality: {{ airData.country_description }} <br>
-  		Country Air Quality Index: {{ airData.country_aqi }}/500 [micrograms per cubic meter] (Good to Bad) <Br>
+  		Area Quality:  <span class="bold"> {{ airData.breezometer_description }}  </span>  <Br>
+  		Area Air Quality Index:  <span class="bold"> {{ airData.breezometer_aqi }}/100 [micrograms per cubic meter] (Good to Bad)  </span>  <br>
+  		Country Quality:  <span class="bold"> {{ airData.country_description }}  </span>  <br>
+  		Country Air Quality Index:  <span class="bold"> {{ airData.country_aqi }}/500 [micrograms per cubic meter] (Good to Bad)  </span>  <Br>
 
   		<br><Br>
 
-  		<b>Cause Of Pollution</b> <Br>
+  		 <span class="bold"> Cause Of Pollution </span>  <Br>
   		{{ airData.dominant_pollutant_text.causes }}
 
   		<br><Br>
-  		<b>Effects Of Pollution</b><br>
+  		 <span class="bold"> Effects Of Pollution </span> <br>
   		{{ airData.dominant_pollutant_text.effects }}
 
   		<br><Br>
-  		<b>Main Pollutant</b><Br>
+  		 <span class="bold"> Main Pollutant </span> <Br>
   		{{ airData.dominant_pollutant_text.main }}
   		
   	</div>
@@ -79,32 +83,34 @@
 
   <div class="card" *ngIf="airData">
   	<div class="card-head">
-  		Recommendations
+  		<ion-icon name="alert"></ion-icon> Recommendations
   	</div>
   	<div class="card-body">
 
-  		 <b>Children</b> <Br>
+  		  <span class="bold"> Children </span>  <Br>
   		{{ airData.random_recommendations.children }}
 
   		<br><Br>
-  		<b>Sport</b><br>
+  		 <span class="bold"> Sport </span> <br>
   		{{ airData.random_recommendations.sport }}
 
   		<br><Br>
-  		<b>health</b><Br>
+  		 <span class="bold"> health </span> <Br>
   		{{ airData.random_recommendations.health }}
 
   		<br><Br>
-  		<b>inside</b><Br>
+  		 <span class="bold"> inside </span> <Br>
   		{{ airData.random_recommendations.inside }}
 
 		<br><Br>
-  		<b>outside</b><Br>
+  		 <span class="bold"> outside </span> <Br>
   		{{ airData.random_recommendations.outside }}
   		
 
   	</div>
   </div>
+
+
 
 
 </ion-content>
