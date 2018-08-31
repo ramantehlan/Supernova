@@ -35,6 +35,7 @@ Smart AI to keep people safe on beaches from all the dangers. It uses ML and rea
 **Solution**
 
 - Using ML to Identify RIP currents from a video.
+- Dense optical flow analysis to detect flow (wave celerity and foam movement) from camera images. These flows are averaged over  many consecutive image pairs. 
 
 **4. Other**
 
@@ -88,4 +89,8 @@ cd Supernova
 - Abhishak Kumar Malviya
 
 Feel free to contribute.
+
+## Resource 
+
+[Ionic Cordova Camera](https://ionicframework.com/docs/native/camera/)
 
