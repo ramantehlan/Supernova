@@ -24,8 +24,8 @@ export class HomePage {
     openWeatherMapKey: string = "b48d71c76bc12ce4415b45cbb858195f";
     breezoMeterKey: string = "2d2a717abed743c982bf247bb59be090";
 
-    lat: number = 28.704060;
-    lon: number = 77.102493;
+    lat: number;
+    lon: number;
 
     // Date 
     airData: object;
@@ -38,21 +38,9 @@ export class HomePage {
     weatherApi: string = "http://api.openweathermap.org/data/2.5/weather";
 
     // Parameters 
-    airPara:object = {
-    	"key": "2d2a717abed743c982bf247bb59be090",
-    	"lat": this.lat,
-    	"lon": this.lon,
-    }
-    uvPara:object = {
-    	"appid": "2ffcf64c74128a6644f33e554d86766c",
-    	"lat": this.lat,
-    	"lon": this.lon,
-    }
-    weatherPara:object = {
-    	"appid": "2ffcf64c74128a6644f33e554d86766c",
-    	"lat": this.lat,
-    	"lon": this.lon,
-    }
+    airPara:object;
+    uvPara:object;
+    weatherPara:object;
 
     // Header object for login api
     header:object =  {
@@ -109,9 +97,12 @@ export class HomePage {
   				this.androidPermissions.PERMISSION.CAMERA,
 
   				]).then(() => {
+  					console.log("getting Geo Location");
   					this.geolocation.getCurrentPosition().then((resp) => {
  					this.lat = resp.coords.latitude;
  					this.lon = resp.coords.longitude;
+ 					console.log("lat: " +   resp.coords.latitude)
+ 					console.log("log: " +   resp.coords.longitude)
  					
  					this.fetch();
 		
@@ -124,6 +115,27 @@ export class HomePage {
   }
 
   fetch(): void{
+
+  	 // Parameters 
+    this.airPara = {
+    	"key": "2d2a717abed743c982bf247bb59be090",
+    	"lat": this.lat,
+    	"lon": this.lon,
+    }
+    
+    this.uvPara = {
+    	"appid": "2ffcf64c74128a6644f33e554d86766c",
+    	"lat": this.lat,
+    	"lon": this.lon,
+    }
+
+    this.weatherPara = {
+    	"appid": "2ffcf64c74128a6644f33e554d86766c",
+    	"lat": this.lat,
+    	"lon": this.lon,
+    }
+
+  	console.log("Fetching start");
 
   	// To get the UV Data
   	// This is to make a http call to fetch user information
