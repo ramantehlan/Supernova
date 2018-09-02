@@ -138,7 +138,7 @@ ionic cordova build android
 - [Raman Tehlan](https://ramantehlan.github.io/)
 - [Noel Johnson](https://github.com/noel3225/)
 - Abhishak Kumar Malviya
-- [Sonu Husain]
+- Sonu Husain
 
 **Logo** 
 
