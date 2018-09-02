@@ -55,15 +55,16 @@ Smart AI to keep people safe on beaches from all the dangers. It uses ML and rea
 
 You should be familiar with following to get started.
 
-- Html/Css
 - TypeScript
 - Python
+- HTML/SCSS
 
 To work on this repository, you need setup the following environment. 
 
-- Node
-- NPM 
-- Ionic 
+- [Angular](https://angularjs.org)
+- [Ionic](https://ionicframework.com)
+- [Node](https://nodejs.org)
+- [NPM](https://www.npmjs.com) 
 
 ## Development
 
