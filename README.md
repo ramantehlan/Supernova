@@ -23,7 +23,7 @@ Smart AI to keep people safe on beaches from all the dangers. It uses ML and rea
 
 **Solution**
 
-- Show different areas having HABs, to avoide.
+- Show different areas having HABs, to avoid.
 - Suggest users beaches near them, which are HABs free and have good quality.
 
 
@@ -47,13 +47,13 @@ Smart AI to keep people safe on beaches from all the dangers. It uses ML and rea
 **Solution**
 
 - *Water Quality:* Highlight areas with bad quality.
-- *Climate – Lighting:* Weather forcast, plus weather alerts.
-- *Tsunamis:* Weather forcast, plus weather alerts.
+- *Climate – Lighting:* Weather forecast, plus weather alerts.
+- *Tsunamis:* Weather forecast, plus weather alerts.
 - *Water Animals:* Sonic senors and ML to detect animals, also warn people of harmful area. 
 
 ## Environment
 
-You should be familier with following to get started.
+You should be familiar with following to get started.
 
 - Html/Css
 - TypeScript
@@ -79,11 +79,27 @@ git clone https://github.com/ramantehlan/Supernova`
 cd Supernova
 ```
 
+## Build
+
+To build this project, you must have the environment setup, plus you must be familiar with environment, it might be buggy.
+
+1. Got to your repository.
+
+```console
+cd Supernova
+``` 
+
+2. Call cordova and ionic build command. 
+
+```console
+	ionic cordova build android
+```
+
 ## Contribution
 
 **Original Authors**
 
-- Raman Tehlan
+- [Raman Tehlan](https://ramantehlan.github.io/)
 - Noel Johnson
 - Sonu Husain
 - Abhishak Kumar Malviya
