@@ -3,7 +3,7 @@
     <img src="./resources/icon.png" width="150">
 </p>
 
-**Finalist Project:** This project was 4th out of 70 Projects in [NASA International Space App Challange - 2018](https://www.nasa.gov/content/the-international-space-apps-challenge). It missed 3rd spot by just 1 point and won consolation price.
+**Finalist Project:** This project was 4th out of 70 Projects in [NASA International Space App Challenge - 2018](https://www.nasa.gov/content/the-international-space-apps-challenge). It missed 3rd spot by just 1 point and won consolation price.
 
 
 # Supernova 
